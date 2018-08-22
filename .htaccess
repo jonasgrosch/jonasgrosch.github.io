@@ -1,0 +1,7 @@
+RewriteEngine on
+
+#ALTERNATE DOMAINS
+# ---------------
+RewriteCond %{HTTP_HOST} ^www.alternativedomain.com$ [NC,OR]
+RewriteCond %{HTTP_HOST} ^alternativedomain.com$ [NC]
+RewriteRule (.*) http://www.primarydomain.com/$1 [R=301,L]
